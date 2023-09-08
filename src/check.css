@@ -1,0 +1,44 @@
+.check {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 340px;
+  margin-top: 50px;
+}
+
+.check-content {
+  height: 270px;
+  width: 400px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(140, 140, 140, 0.3);
+  color: #2659c3;
+}
+.check-content h2 {
+  color: #2659c3;
+  padding-top: 0;
+  padding-left: 0;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 50px;
+  width: 280px;
+  padding: 10px;
+}
+.check-content button {
+  color: #2659c3;
+  margin: 0 auto;
+}
+.check-content input {
+  padding-left: 20px;
+  color: #2659c3;
+  width: 120px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(112, 112, 112);
+  margin-left: 20px;
+}
+label p{
+    color: #2659c3;
+    width: 50px;
+    margin-right: 0px;
+}
