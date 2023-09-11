@@ -2,7 +2,6 @@ import React from "react";
 import "./Modal.css";
 import google from "./icons8-google-48.png"
 import facebook from "./icons8-facebook-48.png"
-import signup from "./icons8-travel-64.png"
 
 function Modal({ isOpen, toggleModal }) {
   if (!isOpen) {
@@ -12,10 +11,6 @@ function Modal({ isOpen, toggleModal }) {
   return (
     <div className="modal">
       <div className="modal-content">
-        {/* <span className="close" onClick={toggleModal}>
-          &times;
-        </span>
-        <button onClick={toggleModal}>Закрыть</button> */}
 
         <title>Sign Up Example</title>
 
@@ -23,7 +18,6 @@ function Modal({ isOpen, toggleModal }) {
         <span class="centering">
           <form class="my-form">
             <span class="signup-welcome-row">
-              {/* <img class="signup-welcome" src={signup} /> */}
               <h1>Sign Up!</h1>
             </span>
             <span class="socials-row">

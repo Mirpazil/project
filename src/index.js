@@ -12,6 +12,7 @@ import Box5 from "./box5";
 import Footer from "./footer";
 import Modal from "./modal";
 import Check from "./Check";
+// import App2 from "./App2";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,5 +28,7 @@ root.render(
     <Footer />
     <Modal />
     <Check />
+    {/* <App2 /> */}
+    
   </React.StrictMode>
 );

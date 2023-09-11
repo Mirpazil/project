@@ -4,7 +4,7 @@ import imgkk from "./akar-icons_search.svg";
 import imgp from "./fontisto_male.svg";
 import img4 from "./image 4.png";
 import img16 from "./image 16.png";
-import img3 from "./image 3.png";
+import img3 from "./imagemoun.png";
 import img13 from "./image 13.png";
 import img17 from "./image 17.png";
 import img10 from "./image 10.png";
@@ -12,7 +12,7 @@ import img5 from "./image 5.png";
 import img12 from "./image 12.png";
 import img15 from "./image 15.png";
 import img8 from "./image 8.png";
-import Modal from "./modal"; // Импорт дочернего компонента
+import Modal from "./modal";
 import React, { useState } from "react";
 import Check from "./Check";
 
@@ -85,7 +85,6 @@ function App() {
             <div className="ppp">
               <button className="checkin" onClick={openModal}>
                 <img src={imgk} className="App-logo" alt="logo" />
-                
                 <p>Check in {checkinDate}</p>--<p>Check out {checkoutDate}</p>
               </button>
               <Check
@@ -101,6 +100,43 @@ function App() {
             <button>
               <img src={imgp} className="App-logo" alt="logo" />1 room, 2 adults
             </button>
+            <a href="#">
+              <button className="search-button" type="submit">
+                Search
+              </button>
+            </a>
+          </div>
+          <div className="box17">
+            <img className="search_img" src={imgkk}></img>
+            <input
+              type="text"
+              name="text"
+              className="search"
+              placeholder="Search destinations, hotels"
+            ></input>
+          </div>
+          <div className="box18">
+            <div className="ppp">
+              <button className="checkin" onClick={openModal}>
+                <img src={imgk} className="App-logo" alt="logo" />
+                <p>Check in {checkinDate}</p>--<p>Check out {checkoutDate}</p>
+              </button>
+              <Check
+                isOpen={isModalOpen}
+                onClose={closeModal}
+                checkinDate={checkinDate}
+                onCheckinChange={handleCheckinChange}
+                checkoutDate={checkoutDate}
+                onCheckoutChange={handleCheckoutChange}
+              />
+            </div>
+          </div>
+          <div className="box19">
+            <button>
+              <img src={imgp} className="App-logo" alt="logo" />1 room, 2 adults
+            </button>
+          </div>
+          <div className="box20">
             <a href="#">
               <button className="search-button" type="submit">
                 Search
@@ -156,6 +192,7 @@ function App() {
               </div>
             </div>
           </div>
+
           <div className="box4">
             <h3>Top Vacation Destinations</h3>
           </div>

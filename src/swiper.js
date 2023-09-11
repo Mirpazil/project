@@ -9,7 +9,6 @@ import Img3 from "./image 36.png";
 import "swiper/css";
 import "swiper/css/free-mode";
 
-
 // import required modules
 import { FreeMode } from "swiper/modules";
 
@@ -20,44 +19,51 @@ export default function Swiper1() {
         slidesPerView={2}
         spaceBetween={30}
         freeMode={true}
-       
         modules={[FreeMode]}
         className="mySwiper89"
+        breakpoints={{
+          380: {
+            slidesPerView: 1,
+          },
+          780: {
+            slidesPerView: 2,
+          },
+        }}
       >
         <SwiperSlide>
           <img className="img1" src={Img}></img>
           <div>
-          <h4>Domestic Flights</h4>
-          <h5>Huge savings on flight with trxvl.</h5>
-          <h4>Book domestic flights starting @ just ₹1459</h4>
-          <button>Book Now</button>
+            <h4>Domestic Flights</h4>
+            <h5>Huge savings on flight with trxvl.</h5>
+            <h4>Book domestic flights starting @ just ₹1459</h4>
+            <button>Book Now</button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <img className="img1" src={Img1}></img>
           <div>
-          <h4>Domestic Flights</h4>
-          <h5>Huge savings on flight with trxvl.</h5>
-          <h4>Book domestic flights starting @ just ₹1459</h4>
-          <button>Book Now</button>
+            <h4>Domestic Flights</h4>
+            <h5>Huge savings on flight with trxvl.</h5>
+            <h4>Book domestic flights starting @ just ₹1459</h4>
+            <button>Book Now</button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <img className="img1" src={Img2}></img>
           <div>
-          <h4>Domestic Flights</h4>
-          <h5>Huge savings on flight with trxvl.</h5>
-          <h4>Book domestic flights starting @ just ₹1459</h4>
-          <button>Book Now</button>
+            <h4>Domestic Flights</h4>
+            <h5>Huge savings on flight with trxvl.</h5>
+            <h4>Book domestic flights starting @ just ₹1459</h4>
+            <button>Book Now</button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <img className="img1" src={Img3}></img>
           <div>
-          <h4>Domestic Flights</h4>
-          <h5>Huge savings on flight with trxvl.</h5>
-          <h4>Book domestic flights starting @ just ₹1459</h4>
-          <button>Book Now</button>
+            <h4>Domestic Flights</h4>
+            <h5>Huge savings on flight with trxvl.</h5>
+            <h4>Book domestic flights starting @ just ₹1459</h4>
+            <button>Book Now</button>
           </div>
         </SwiperSlide>
       </Swiper>

@@ -22,6 +22,17 @@ export default function SwiperJ() {
           clickable: true,
         }}
         className="mySwiper"
+        breakpoints={{
+          380: {
+            slidesPerView: 1,
+          },
+          375: {
+            slidesPerView: 1,
+          },
+          780: {
+            slidesPerView: 2,
+          },
+        }}
       >
         <SwiperSlide>
           <div className="imgbox">
