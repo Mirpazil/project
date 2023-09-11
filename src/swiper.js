@@ -22,10 +22,10 @@ export default function Swiper1() {
         modules={[FreeMode]}
         className="mySwiper89"
         breakpoints={{
-          380: {
+          375: {
             slidesPerView: 1,
           },
-          780: {
+          768: {
             slidesPerView: 2,
           },
         }}

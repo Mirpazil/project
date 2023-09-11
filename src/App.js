@@ -15,12 +15,18 @@ import img8 from "./image 8.png";
 import Modal from "./modal";
 import React, { useState } from "react";
 import Check from "./Check";
+import { Link } from "react-router-dom";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleModal = () => {
     setShowModal(!showModal);
+  };
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -40,13 +46,14 @@ function App() {
   };
 
   const handleCheckoutChange = (e) => {
-    setCheckoutDate(e.target.value);
+    setCheckoutDate(e.target.value);    
   };
   return (
+    
     <div className="App">
       <header className="App-header">
         <h1>trxvl.</h1>
-        <nav class="menu">
+        <nav className={`menu ${showMenu ? "active" : ""}`}>
           <ul>
             <li>
               <a href="#">Home</a>
@@ -68,6 +75,15 @@ function App() {
             </li>
           </ul>
         </nav>
+        <div
+          className={`burger-menu ${showMenu ? "active" : ""}`}
+          onClick={toggleMenu}
+        >
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+        
       </header>
       <div className="Main">
         <main className="Main-app">
@@ -146,45 +162,47 @@ function App() {
           <div className="box3">
             <h2>Top categories</h2>
             <div className="boxing">
-              <div>
+              <div className="opacity">
                 <img src={img4}></img>
                 <p>Beaches</p>
               </div>
-              <div>
+              <div className="opacity">
                 <img src={img16}></img>
                 <p>Deserts</p>
               </div>
-              <div>
+              <div className="opacity">
                 <a href="#">
                   <img src={img3}></img>
+                  <Link to='/mount'>
                   <p>Mountains</p>
+                  </Link>
                 </a>
               </div>
-              <div>
+              <div className="opacity">
                 <img src={img13}></img>
                 <p>Iconic Cities</p>
               </div>
-              <div>
+              <div className="topcatigories">
                 <img src={img17}></img>
                 <p>Houseboats</p>
               </div>
-              <div>
+              <div className="topcatigories">
                 <img src={img10}></img>
                 <p>Countryside</p>
               </div>
-              <div>
+              <div className="topcatigories">
                 <img src={img5}></img>
                 <p>Camping</p>
               </div>
-              <div>
+              <div className="topcatigories">
                 <img src={img12}></img>
                 <p>Castles</p>
               </div>
-              <div>
+              <div className="topcatigories">
                 <img src={img15}></img>
                 <p>Skiing</p>
               </div>
-              <div>
+              <div className="topcatigories">
                 <a href="#">
                   <img src={img8}></img>
                   <p>Tropical</p>

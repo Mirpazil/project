@@ -2,6 +2,8 @@ import facebook from "./facebook.png";
 import insta from "./instagram.png";
 import twitter from "./twitter.png";
 import yotube from "./youtube.png";
+
+
 function Footer() {
   return (
     <footer>
@@ -56,20 +58,35 @@ function Footer() {
             <a>Autumnal Bulgier</a>
           </li>
           <div className="soc">
-            <a href="#">
-              <img src={facebook}></img>
-            </a>
-            <a href="#">
-              <img src={insta}></img>
-            </a>
+            <ul className="ulll">
+              <li>
+                <a href="#">
+                  <i class="fab fa-facebook-f icon"></i>
+                  <img src={facebook}></img>
+                </a>
+              </li>
 
-            <a href="#">
-              <img src={yotube}></img>
-            </a>
+              <li>
+                <a href="#">
+                  <i class="fab fa-linkedin-in icon"></i>
+                  <img src={insta}></img>
+                </a>
+              </li>
 
-            <a href="#">
-              <img src={twitter}></img>
-            </a>
+              <li>
+                <a href="#">
+                  <i class="fab fa-google-plus-g icon"></i>
+                  <img src={yotube}></img>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="fab fa-twitter icon"></i>
+                  <img src={twitter}></img>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

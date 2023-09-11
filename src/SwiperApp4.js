@@ -27,6 +27,14 @@ export default function SwiperApp3() {
         pagination={{
           clickable: true,
         }}
+        breakpoints={{
+          375: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+        }}
         className="mySwiper91"
       >
         <SwiperSlide>

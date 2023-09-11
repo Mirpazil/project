@@ -29,8 +29,8 @@ export default function SwiperJ() {
           375: {
             slidesPerView: 1,
           },
-          780: {
-            slidesPerView: 2,
+          768: {
+            slidesPerView: 3,
           },
         }}
       >

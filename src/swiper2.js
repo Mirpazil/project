@@ -28,7 +28,7 @@ export default function swiper2() {
           375: {
             slidesPerView: 1,
           },
-          780: {
+          768: {
             slidesPerView: 2,
           },
         }}

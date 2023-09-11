@@ -20,12 +20,17 @@ import SwiperApp3 from "./SwiperApp3";
 import SwiperApp4 from "./SwiperApp4";
 import SwiperApp5 from "./SwiperApp5";
 import Footer2 from "./Footer2";
+import { Link } from "react-router-dom";
 
 function App2() {
   const [showModal, setShowModal] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleModal = () => {
     setShowModal(!showModal);
+  };
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -51,8 +56,10 @@ function App2() {
     <div>
       <div className="App2">
         <header className="App-header">
-          <h1>trxvl.</h1>
-          <nav class="menu">
+          <Link to="/">
+            <h1>trxvl.</h1>
+          </Link>
+          <nav className={`menu ${showMenu ? "active" : ""}`}>
             <ul>
               <li>
                 <a href="#">Home</a>
@@ -74,6 +81,14 @@ function App2() {
               </li>
             </ul>
           </nav>
+          <div
+            className={`burger-menu ${showMenu ? "active" : ""}`}
+            onClick={toggleMenu}
+          >
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
         </header>
         <div className="Main">
           <main className="Main-app">
@@ -113,48 +128,88 @@ function App2() {
                 </button>
               </a>
             </div>
+
+            <div className="box17">
+            <img className="search_img" src={imgkk}></img>
+            <input
+              type="text"
+              name="text"
+              className="search"
+              placeholder="Search destinations, hotels"
+            ></input>
+          </div>
+          <div className="box18">
+            <div className="ppp">
+              <button className="checkin" onClick={openModal}>
+                <img src={imgk} className="App-logo" alt="logo" />
+                <p>Check in {checkinDate}</p>--<p>Check out {checkoutDate}</p>
+              </button>
+              <Check
+                isOpen={isModalOpen}
+                onClose={closeModal}
+                checkinDate={checkinDate}
+                onCheckinChange={handleCheckinChange}
+                checkoutDate={checkoutDate}
+                onCheckoutChange={handleCheckoutChange}
+              />
+            </div>
+          </div>
+          <div className="box19">
+            <button>
+              <img src={imgp} className="App-logo" alt="logo" />1 room, 2 adults
+            </button>
+          </div>
+          <div className="box20">
+            <a href="#">
+              <button className="search-button" type="submit">
+                Search
+              </button>
+            </a>
+          </div>
             <div className="box3">
               <h2>Top categories</h2>
               <div className="boxing">
-                <div>
+                <div className="opacity">
                   <img src={img4}></img>
-                  <p>Beaches</p>
+                  <p className="ppp1">Beaches</p>
                 </div>
-                <div>
+                <div className="opacity">
                   <img src={img16}></img>
-                  <p>Deserts</p>
-                </div>
-                <div>
+                  <p className="ppp1">Deserts</p>
+                </div >
+                <div className="opacity">
                   <a href="#">
                     <img src={img3}></img>
-                    <p>Mountains</p>
+                    <Link to="/mount">
+                      <p className="ppp1">Mountains</p>
+                    </Link>
                   </a>
                 </div>
-                <div>
+                <div className="opacity">
                   <img src={img13}></img>
-                  <p>Iconic Cities</p>
+                  <p className="ppp1">Iconic Cities</p>
                 </div>
-                <div>
+                <div className="topcatigories">
                   <img src={img17}></img>
                   <p>Houseboats</p>
                 </div>
-                <div>
+                <div className="topcatigories">
                   <img src={img10}></img>
                   <p>Countryside</p>
                 </div>
-                <div>
+                <div className="topcatigories">
                   <img src={img5}></img>
                   <p>Camping</p>
                 </div>
-                <div>
+                <div className="topcatigories">
                   <img src={img12}></img>
                   <p>Castles</p>
                 </div>
-                <div>
+                <div className="topcatigories">
                   <img src={img15}></img>
                   <p>Skiing</p>
                 </div>
-                <div>
+                <div className="topcatigories">
                   <a href="#">
                     <img src={img8}></img>
                     <p>Tropical</p>

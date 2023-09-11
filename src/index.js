@@ -12,23 +12,40 @@ import Box5 from "./box5";
 import Footer from "./footer";
 import Modal from "./modal";
 import Check from "./Check";
-// import App2 from "./App2";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import App2 from "./App2";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
-    <Main />
-    <Main1 />
-    <Swiper1 />
-    <SwiperJ />
-    <Box4 />
-    <Swiper2 />
-    <Box5 />
-    <Footer />
-    <Modal />
-    <Check />
-    {/* <App2 /> */}
-    
+    <BrowserRouter>
+    <Routes>
+     <Route path="/" element={<Neww/>}/>
+     <Route path="/mount" element={<App2/>}/>
+    </Routes>
+     
+
+
+    </BrowserRouter>
   </React.StrictMode>
 );
+
+
+
+function Neww() {
+  return(
+    <>
+     <App />
+      <Main />
+      <Main1 />
+      <Swiper1 />
+      <SwiperJ />
+      <Box4 />
+      <Swiper2 />
+      <Box5 />
+      <Footer />
+      <Modal />
+      <Check />
+      </>
+  )
+}

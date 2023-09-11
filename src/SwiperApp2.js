@@ -27,7 +27,15 @@ export default function SwiperApp2() {
         pagination={{
           clickable: true,
         }}
-        className="mySwiper88"
+        breakpoints={{
+          375: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+        }}
+        className="mySwiper100"
       >
         <SwiperSlide>
           <div className="MounBox">

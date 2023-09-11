@@ -29,7 +29,7 @@
   
 } */
 .my-form {
-  position: fixed;
+  position: absolute;
   flex-direction: column;
   z-index: 1;
   gap: 16px;
@@ -40,7 +40,7 @@
   max-width: 500px;
   width: 100%;
   padding: 32px;
-  margin-right: 1284px;
+  margin-right: 330px;
   margin-top: 790px;
 }
 
@@ -254,4 +254,51 @@
 
 .my-form__signin a:hover {
   text-decoration: underline;
+}
+
+/* @media (max-width: 768px){
+  .my-form {
+    width: 0;
+    margin-top: 230px;
+    padding: 15px;
+  }
+  .my-form__button {
+    margin-top: 0;
+    line-height: 0;
+    padding-left: 55px;
+  }
+  .my-form__content{
+    gap: 8px;
+  }
+
+  .text-field input{
+    width: 100px;
+    height: 0;
+  }
+  .signup-welcome-row h1{
+    margin-left: 98px;
+  }
+} */
+@media (max-width: 375px){
+  .my-form {
+    width: 0 !important;
+    margin-top: 315px !important;
+    padding: 15px !important; 
+  }
+  .my-form__button {
+    margin-top: 0;
+    line-height: 0;
+    padding-left: 55px;
+  }
+  .my-form__content{
+    gap: 8px;
+  }
+
+  .text-field input{
+    width: 220px;
+    height: 0;
+  }
+  .signup-welcome-row h1{
+    margin-left: 98px;
+  }
 }
